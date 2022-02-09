@@ -1,0 +1,6 @@
+create view drug_price as
+(
+select drug.trade_no,drug.name,sell.price
+from drug,sell
+where drug.trade_no=sell.trade_no
+)
