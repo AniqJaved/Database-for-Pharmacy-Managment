@@ -1,0 +1,9 @@
+select trade_no from Drug
+where trade_no not in(Select drug.trade_no
+from drug
+left outer join prescribed
+on drug.trade_no=prescribed.trade_no)
+
+
+
+
