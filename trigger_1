@@ -1,0 +1,13 @@
+CREATE TABLE deleted_drugs (
+trade_no varchar2(8),
+name varchar2(25),
+DATENEW TIMESTAMP NOT NULL,
+PRIMARY KEY(trade_no,DATENEW)
+);
+CREATE TRIGGER deleted_drug_trig
+before delete on drug
+FOR EACH ROW
+BEGIN
+INSERT INTO deleted_drugs VALUES (:OLD.trade_no
+,:OLD.name, CURRENT_TIMESTAMP);
+END;
