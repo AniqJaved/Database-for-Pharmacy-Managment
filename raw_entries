@@ -1,0 +1,142 @@
+DOCTORS:
+insert into doctor values('D_1001','DR Usman','Cardiologist');
+insert into doctor values('D_1002','DR Ahmed','Haematologist');
+insert into doctor values('D_1003','DR Aniq','Pathaelogist');
+insert into doctor values('D_1004','DR Fatima','Gynaecologist');
+insert into doctor values('D_1005','DR Nimra','Gynaecologist');
+insert into doctor values('D_1006','DR Usama','Cardiologist');
+insert into doctor values('D_1007','DR Taha','Cardiologist');
+insert into doctor values('D_1008','DR Raza','Urologist');
+insert into doctor values('D_1009','DR Alian','Cardiologist');
+insert into doctor values('D_1010','DR Kausar','Gynaecologist');
+Drug:
+insert into drug values('Hs04_301','Aspirin','1');
+insert into drug values('Hs04_303','Abacivir','2');
+insert into drug values('Hs04_304','Hemilia','3');
+insert into drug values('Hs04_305','Ginopea','4');
+insert into drug values('Zs87_678','Efouyt','5');
+insert into drug values('Zs87_302','Kayat','6');
+insert into drug values('Zs87_378','Lokius','7');
+insert into drug values('Zs74_391','BNIUT','8');
+insert into drug values('Zs98_394','Asiytre','9'); insert into drug values('Hs04_302',' Alemtuzumab','10');
+PHARMACY:
+insert into pharmacy values ('Ph_100','D Watson','03337234988','Islamabad','House#49, Street#58');
+insert into pharmacy values ('Ph_101','Shaheen','03335341829','Islamabad','House G1, Street#18');
+insert into pharmacy values ('Ph_102',' Apotheco','03335347823','Rawalpindi','House #12, Street#8');
+insert into pharmacy values ('Ph_103',' Bartell Drugs','03123741820','Islamabad','House #D4, Street#1');
+insert into pharmacy values ('Ph_104',' Covenant Pharmacy','03205341786','Lahore','House #09, Street#58');
+insert into pharmacy values ('Ph_105','Cash go Drugs','03015341094','Rawalpindi','House#4D, Street#8');
+insert into pharmacy values ('Ph_106','D mart','03455341891',' Lahore ','House#4, Street#1');
+insert into pharmacy values ('Ph_107','Ali Pharmacy','03335841957','Karachi','House#4, Street#02');
+insert into pharmacy values ('Ph_108','My Drugs','03145511126','Islamabad','House#7, Street#6');
+insert into pharmacy values ('Ph_109','Latif Pharmacy','03335241821',' Karachi ','House#23P, Street#05');
+insert into pharmacy values ('Ph_110','Doctors Medico','03335322369',' Karachi ','House#4A, Street#8');
+PATIENTS:
+insert into patient values ('P_1001','MALE','Talha Amjad','Islamabad','House # 457-K, Street # 70, Sector G-8/3');
+insert into patient values ('P_1002','FEMALE','Aisha','Rawalpindi','House # 57, Street # 28, Sector R-8/3');
+insert into patient values ('P_1003','MALE','Jawad Ali','Lahore','House # 47-K, Street # 18, Sector U-8/3');
+insert into patient values ('P_1004','MALE','Aniq Javed','Islamabad','House # 457-K, Street # 5, Sector I-8/3');
+insert into patient values ('P_1005','FEMALE','Asma','Rawalpindi','House # 5, Street # 8, Sector P-8/3');
+insert into patient values ('P_1006','MALE','Amjad Hussain','Islamabad','House # 47-K, Street # 6, Sector Q-8/3');
+insert into patient values ('P_1007','FEMALE','Haniya','Islamabad','House # 45-K, Street # 58, Sector W-8/3');
+insert into patient values ('P_1008','MALE','Usama','Rawalpindi','House # 4-K, Street # 98, Sector P-8/3');
+insert into patient values ('P_1009','FEMALE','Zara','Lahore','House # 47, Street # 78, Sector G-8/3');
+insert into patient values ('P_1010','FEMALE','Sara','Islamabad','House # 7-K, Street # 58, Sector H-8/3');
+Pharmacist:
+insert into pharmacist values ('PM_100','Aamir Mirza','Ph_100');
+insert into pharmacist values ('PM_101','Shadan Noon','Ph_101');
+insert into pharmacist values ('PM_102','Hilaal Sarbani','Ph_100');
+insert into pharmacist values ('PM_103','Sabahattin Kundi','Ph_105');
+insert into pharmacist values ('PM_104','Ari Shaikh','Ph_108');
+insert into pharmacist values ('PM_105','Durul Gill','Ph_105');
+insert into pharmacist values ('PM_106','Olus Masood','Ph_110');
+insert into pharmacist values ('PM_107','Norooz Alvi','Ph_108');
+insert into pharmacist values ('PM_108','Aamir Mirza','Ph_108');
+insert into pharmacist values ('PM_109','Erdemer Salehi','Ph_109');
+DRUG MANUFACTURER:
+insert into DRUG_MANAFACTURE values ('MI_101','Libby Cherry','Islamabad','House # 457-K, Street # 70, Sector G-8/3');
+insert into DRUG_MANAFACTURE values ('MI_102','Avah Ayala','Karachi','House # 57, Street # 28, Sector R-8/3');
+insert into DRUG_MANAFACTURE values ('MI_103','Anika Cobb','Lahore','House # 47-K, Street # 18, Sector U-8/3');
+insert into DRUG_MANAFACTURE values ('MI_104','Dustin Mooney','Karachi','House # 457-K, Street # 5, Sector I-8/3');
+insert into DRUG_MANAFACTURE values ('MI_105','Dana Jenkins','Rawalpindi','House # 5, Street # 8, Sector P-8/3');
+insert into DRUG_MANAFACTURE values ('MI_106','Aldo Wright','Islamabad','House # 47-K, Street # 6, Sector Q-9/3');
+insert into DRUG_MANAFACTURE values ('MI_107','Yasmin','Karachi','House # 45-K, Street # 58, Sector W-8/3');
+insert into DRUG_MANAFACTURE values ('MI_108','Kelly','Karachi','House # 4-K, Street # 98, Sector P-8/3');
+insert into DRUG_MANAFACTURE values ('MI_109','Walters','Lahore','House # 47, Street # 78, Sector G-8/3');
+insert into DRUG_MANAFACTURE values ('MI_110','Sarah','Islamabad','House # 7-K, Street # 58, Sector H-8/3');
+Patient contact:
+Insert into patient_contact values ('03345678941','P_1001');
+Insert into patient_contact values ('03345678942','P_1002');
+Insert into patient_contact values ('03345678943','P_1003');
+Insert into patient_contact values ('03345678944','P_1004');
+Insert into patient_contact values ('03345678945','P_1005');
+Insert into patient_contact values ('03345678946','P_1006');
+Insert into patient_contact values ('03345678947','P_1007');
+Insert into patient_contact values ('03345678948','P_1008');
+Insert into patient_contact values ('03345678949','P_1009');
+Insert into patient_contact values ('03345678950','P_1010');
+Contract:
+Insert into contract values ('01-OCT-2021',' 01-OCT-2022','MI_101','Ph_100');
+Insert into contract values ('02-OCT-2021',' 02-OCT-2022','MI_102','Ph_101');
+Insert into contract values ('03-OCT-2021',' 03-OCT-2022','MI_103','Ph_102');
+Insert into contract values ('04-OCT-2021',' 04-OCT-2022','MI_104','Ph_103');
+Insert into contract values ('05-OCT-2021',' 05-OCT-2022','MI_105','Ph_104');
+Insert into contract values ('06-OCT-2021',' 06-OCT-2022','MI_106','Ph_105');
+Insert into contract values ('07-OCT-2021',' 07-OCT-2022','MI_107','Ph_106');
+Insert into contract values ('08-OCT-2021',' 08-OCT-2022','MI_108','Ph_107');
+Insert into contract values ('09-OCT-2021',' 09-OCT-2022','MI_109','Ph_108');
+Insert into contract values ('10-OCT-2021',' 10-OCT-2022','MI_110','Ph_109');
+Manufacturer:
+Insert into manufacturer values ('MI_101', 'Hs04_301');
+Insert into manufacturer values ('MI_102', 'Hs04_303');
+Insert into manufacturer values ('MI_103', 'Hs04_304');
+Insert into manufacturer values ('MI_104', 'Hs04_305');
+Insert into manufacturer values ('MI_105', 'Zs87_678');
+Insert into manufacturer values ('MI_106', 'Zs87_302');
+Insert into manufacturer values ('MI_107', 'Zs87_378');
+Insert into manufacturer values ('MI_108', 'Zs74_391');
+Insert into manufacturer values ('MI_109', 'Zs98_394');
+Insert into manufacturer values ('MI_110', 'Hs04_302');
+Prescribed:
+Insert into PRESCRIBED values ('03-DEC-2021','P_1001','D_1001','Hs04_301');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1002','D_1002','Hs04_303');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1003','D_1003','Hs04_304');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1004','D_1004','Hs04_305');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1005','D_1005','Zs87_678');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1006','D_1006','Zs87_302');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1007','D_1007','Zs87_378');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1008','D_1008','Zs74_391');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1009','D_1009','Zs98_394');
+Insert into PRESCRIBED values ('03-DEC-2021','P_1010','D_1010','Hs04_302');
+Shift:
+Insert into shift values ('22:36:58','23:36:58','26-OCT-2022','PM_100');
+Insert into shift values ('21:36:58','23:36:58','02-JAN-2022','PM_101');
+Insert into shift values ('20:36:58','23:36:58','03-JAN-2022','PM_102');
+Insert into shift values ('21:36:58','23:36:58','04-JAN-2022','PM_103');
+Insert into shift values ('20:36:58','23:36:58','05-JAN-2022','PM_104');
+Insert into shift values ('22:36:58','23:36:58','06-JAN-2022','PM_105');
+Insert into shift values ('20:36:58','23:36:58','07-JAN-2022','PM_106');
+Insert into shift values ('21:36:58','23:36:58','08-JAN-2022','PM_107');
+Insert into shift values ('22:36:58','23:36:58','09-JAN-2022','PM_108');
+Insert into shift values ('20:36:58','23:36:58','10-JAN-2022','PM_109');
+Sell:
+Insert into Sell values ('100','Hs04_301','Ph_100');
+Insert into Sell values ('101','Hs04_303','Ph_101');
+Insert into Sell values ('102','Hs04_304','Ph_102');
+Insert into Sell values ('103','Hs04_305','Ph_103');
+Insert into Sell values ('104','Zs87_678','Ph_104');
+Insert into Sell values ('105','Zs87_302','Ph_105');
+Insert into Sell values ('106','Zs87_378','Ph_106');
+Insert into Sell values ('107','Zs74_391','Ph_107');
+Insert into Sell values ('108','Zs98_394','Ph_108');
+Insert into Sell values ('109','Hs04_302','Ph_109');
+Consult:
+Insert into consult values ('P_1002', 'D_1002');
+Insert into consult values ('P_1003', 'D_1003');
+Insert into consult values ('P_1004', 'D_1004');
+Insert into consult values ('P_1005', 'D_1005');
+Insert into consult values ('P_1006', 'D_1006');
+Insert into consult values ('P_1007', 'D_1007');
+Insert into consult values ('P_1008', 'D_1008');
+Insert into consult values ('P_1009', 'D_1009');
+Insert into consult values ('P_1010', 'D_1010');
