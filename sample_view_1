@@ -1,0 +1,6 @@
+create view Prescribed_Drug as
+(select prescribed.p_date Prescribed_date, drug.name Drug_Name, drug_manafacture.name Manufacturer_Name
+from drug,prescribed,drug_manafacture,manufacturer
+where prescribed.trade_no=drug.trade_no
+and drug.trade_no=manufacturer.trade_no
+and manufacturer.manafacturar_id=drug_manafacture.manafacturar_id)
