@@ -1,0 +1,11 @@
+CREATE OR REPLACE TRIGGER Price_Trig
+BEFORE INSERT or UPDATE ON sell
+FOR EACH ROW
+DECLARE
+v_error VARCHAR2(2000);
+BEGIN
+if :new.price > 1000 then
+v_error:='No drug can be sold at greater than 1000 price';
+raise_application_error(-20999,v_error);
+end if;
+END;
