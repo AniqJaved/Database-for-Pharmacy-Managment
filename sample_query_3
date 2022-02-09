@@ -1,0 +1,5 @@
+select name,contact_no from
+(select pharmacist.name, pharmacy.contact_no,pharmacy.phar_id
+from Pharmacist inner join pharmacy
+on Pharmacist.phar_id=pharmacy.phar_id )
+where phar_id='Ph_101'
