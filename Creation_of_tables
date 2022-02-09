@@ -1,0 +1,115 @@
+Create Tables
+CREATE TABLE Doctor
+(
+Dr_ID VARCHAR(8) NOT NULL,
+Name VARCHAR(25) NOT NULL,
+Specialization VARCHAR(20) ,
+PRIMARY KEY (Dr_ID)
+);
+CREATE TABLE Patient
+(
+Patient_Id VARCHAR(8) NOT NULL,
+Sex VARCHAR(6),
+Name VARCHAR(25) NOT NULL,
+City VARCHAR(20),
+Street_Address VARCHAR(100),
+PRIMARY KEY (Patient_Id)
+);
+CREATE TABLE Patient_Contact
+(
+Contact CHAR(11) NOT NULL,
+Patient_Id VARCHAR(8),
+PRIMARY KEY (Contact, Patient_Id),
+FOREIGN KEY (Patient_Id) REFERENCES Patient(Patient_Id)
+ON DELETE CASCADE
+);
+CREATE TABLE Pharmacy
+(
+Phar_Id VARCHAR(8) NOT NULL,
+Name VARCHAR(25) ,
+Contact_No CHAR(11) ,
+City VARCHAR(20) ,
+Street_Address VARCHAR(50) ,
+PRIMARY KEY (Phar_Id)
+);
+CREATE TABLE Pharmacist
+(
+Pharmacist_Id VARCHAR(8) NOT NULL,
+Name VARCHAR(25) ,
+Phar_Id VARCHAR(8),
+PRIMARY KEY (Pharmacist_Id),
+FOREIGN KEY (Phar_Id) REFERENCES Pharmacy(Phar_Id)
+ON DELETE CASCADE
+);
+CREATE TABLE Drug
+(
+Trade_No VARCHAR(8) NOT NULL,
+Name VARCHAR(25) ,
+Qr_Code INT,
+PRIMARY KEY (Trade_No)
+);
+CREATE TABLE Drug_Manafacture
+(
+Manafacturar_Id VARCHAR(8) NOT NULL,
+Name VARCHAR(25),
+City VARCHAR(20),
+Street_Address VARCHAR2(50),
+PRIMARY KEY (Manafacturar_Id)
+);
+CREATE TABLE Manufacturer
+(
+Manafacturar_Id VARCHAR(8),
+Trade_No VARCHAR(8),
+PRIMARY KEY (Manafacturar_Id, Trade_No),
+FOREIGN KEY (Manafacturar_Id) REFERENCES Drug_Manafacture(Manafacturar_Id
+) ON DELETE CASCADE,
+FOREIGN KEY (Trade_No) REFERENCES Drug(Trade_No) ON DELETE CASCADE
+);
+CREATE TABLE Contract
+(
+Start_Date DATE NOT NULL,
+End_Date DATE,
+Manafacturar_Id VARCHAR(8),
+Phar_Id VARCHAR(8),
+PRIMARY KEY (Manafacturar_Id, Phar_Id),
+FOREIGN KEY (Manafacturar_Id) REFERENCES Drug_Manafacture(Manafacturar_Id) ON DELETE CASCADE,
+FOREIGN KEY (Phar_Id) REFERENCES Pharmacy(Phar_Id) ON DELETE CASCADE
+);
+CREATE TABLE Prescribed
+(
+P_Date DATE,
+Patient_Id VARCHAR(8),
+Dr_ID VARCHAR(8),
+Trade_No VARCHAR(8),
+PRIMARY KEY (P_Date, Patient_Id, Dr_ID, Trade_No),
+FOREIGN KEY (Patient_Id) REFERENCES Patient(Patient_Id) ON DELETE CASCADE,
+FOREIGN KEY (Dr_ID) REFERENCES Doctor(Dr_ID) ON DELETE CASCADE,
+FOREIGN KEY (Trade_No) REFERENCES Drug(Trade_No) ON DELETE CASCADE
+);
+CREATE TABLE Sell
+(
+Price FLOAT NOT NULL,
+Trade_No VARCHAR(8),
+Phar_Id VARCHAR(8),
+PRIMARY KEY (Trade_No, Phar_Id),
+FOREIGN KEY (Trade_No) REFERENCES Drug(Trade_No) ON DELETE CASCADE,
+FOREIGN KEY (Phar_Id) REFERENCES Pharmacy(Phar_Id) ON DELETE CASCADE
+);
+CREATE TABLE Shift
+(
+Shift_Start_Time CHAR(8) NOT NULL,
+Shift_End_Time CHAR(8),
+S_Date DATE NOT NULL,
+Pharmacist_Id VARCHAR(8),
+PRIMARY KEY (S_Date, Pharmacist_Id),
+FOREIGN KEY (Pharmacist_Id) REFERENCES Pharmacist(Pharmacist_Id)
+ON DELETE CASCADE
+);
+CREATE TABLE Consult
+(
+Patient_Id VARCHAR(8),
+Dr_ID VARCHAR(8),
+PRIMARY KEY (Patient_Id, Dr_ID),
+FOREIGN KEY (Patient_Id) REFERENCES Patient(Patient_Id) ON DELETE CASCADE,
+FOREIGN KEY (Dr_ID) REFERENCES Doctor(Dr_ID) ON DELETE CASCADE
+);
