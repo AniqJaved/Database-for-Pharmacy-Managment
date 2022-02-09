@@ -1,0 +1,3 @@
+select name
+from Doctor
+where specialization='Gynaecologist'
